@@ -1,8 +1,8 @@
-
+ï»¿
 def Lisa_andmed(i:list,p:list):
     """Choose name and add it for list 
-    ::param: List i: Inimeste järjend
-    ::param: List p: Palgade järjend
+    ::param: List i: Inimeste jĞ´rjend
+    ::param: List p: Palgade jĞ´rjend
     :rtype: list, list
     """
     n=int(input("Mittu innimest"))
@@ -16,8 +16,8 @@ def Lisa_andmed(i:list,p:list):
 
 def  Kusutamine(i:list,p:list):
     """Choose name and delete it from list
-    ::param: List i: Inimeste järjend
-    ::param: List p: Palgade järjend
+    ::param: List i: Inimeste jĞ´rjend
+    ::param: List p: Palgade jĞ´rjend
     :rtype: list, list
     """
     nimi=input("Siseta nimi")
@@ -33,8 +33,8 @@ def  Kusutamine(i:list,p:list):
 
 def maksimum(i:list,p:list):
     """Found max Palg
-    ::param: List i: Inimeste järjend
-    ::param: List p: Palgade järjend
+    ::param: List i: Inimeste jĞ´rjend
+    ::param: List p: Palgade jĞ´rjend
     :rtype: int, str
     """
 
@@ -54,8 +54,8 @@ def maksimum(i:list,p:list):
 
 def minimum(i:list,p:list):
     """Found min Palg
-    ::param: List i: Inimeste järjend
-    ::param: List p: Palgade järjend
+    ::param: List i: Inimeste jĞ´rjend
+    ::param: List p: Palgade jĞ´rjend
     :rtype: int, str
     """
 
@@ -73,8 +73,8 @@ def minimum(i:list,p:list):
 
 def Sorteerimine(i:list,p:list):
     """Found min Palg
-    ::param: List i: Inimeste järjend
-    ::param: List p: Palgade järjend
+    ::param: List i: Inimeste jĞ´rjend
+    ::param: List p: Palgade jĞ´rjend
     :rtype: int, str
     """
     v=int(input("palk 1-kananeb, 2-kasvab?"))
@@ -104,8 +104,8 @@ def Sorteerimine(i:list,p:list):
 
 def doubl(i:list,p:list):
     """Found min Palg
-    ::param: List i: Inimeste järjend
-    ::param: List p: Palgade järjend
+    ::param: List i: Inimeste jĞ´rjend
+    ::param: List p: Palgade jĞ´rjend
     :rtype: int, str
     """
     dublikatid=[x for x in p if p.count(x)>1]
@@ -113,7 +113,7 @@ def doubl(i:list,p:list):
     for palk in dublikatid:
         n=p.count(palk)
         k=-1
-        print(f"{palk} saavad kätte järgmised inimesed")
+        print(f"{palk} saavad kĞ´tte jĞ´rgmised inimesed")
         for j in range(n):
             k=p.index(palk,k+1)
             nimi=i[k]
@@ -123,8 +123,8 @@ def doubl(i:list,p:list):
 def palkbynimi(i:list, p:list):
     """
     Leiab isiku palga tema nime alusel
-    ::param: List i: Inimeste järjend
-    ::param: List p: Palgade järjend
+    ::param: List i: Inimeste jĞ´rjend
+    ::param: List p: Palgade jĞ´rjend
     :::rtype: int, str
     """
     nim=input("Print nimi")
@@ -138,30 +138,30 @@ def palkbynimi(i:list, p:list):
 
 def palgadfilter(i:list, p:list):
     """
-    leida kõik inimesed, kelle palk on suurem/väiksem kui sisestatud palk.
-    ::param: List i: Inimeste järjend
-    ::param: List p: Palgade järjend
+    leida kÑ…ik inimesed, kelle palk on suurem/vĞ´iksem kui sisestatud palk.
+    ::param: List i: Inimeste jĞ´rjend
+    ::param: List p: Palgade jĞ´rjend
     :::rtype: int, str
     """
-    v=int(input("palk 1-surem, 2-vähem?"))
+    v=int(input("palk 1-surem, 2-vĞ´hem?"))
     palk1=int(input("print palk"))
     list1 = []
     if v ==1:
         for jj in range(len(i)):
             if palk1<p[jj]:
                 list1.append((i[jj], p[jj]))
-        print(f"kõik inimesed, kes teenivad rohkem kui {palk1} on {list1}")
+        print(f"kÑ…ik inimesed, kes teenivad rohkem kui {palk1} on {list1}")
     elif v ==2:
         for jj in range(len(i)):
             if palk1>p[jj]:
                 list1.append((i[jj], p[jj]))
-        print(f"kõik inimesed, kes teenivad vähem kui {palk1} on {list1}")
+        print(f"kÑ…ik inimesed, kes teenivad vĞ´hem kui {palk1} on {list1}")
   
 def top3 (i:list, p:list):
     """
-    näidata 3 väikseimat ja suurimat palka
-    ::param: List i: Inimeste järjend
-    ::param: List p: Palgade järjend
+    nĞ´idata 3 vĞ´ikseimat ja suurimat palka
+    ::param: List i: Inimeste jĞ´rjend
+    ::param: List p: Palgade jĞ´rjend
     :::rtype: int, str
     """
     list1=[0,0,0]
@@ -176,7 +176,7 @@ def top3 (i:list, p:list):
         if list1[0] +list1[1] +list1[2] > list1[1] +list1[2] + p[gg]:
                 list1.remove(max(list1))
                 list1.append(p[gg])
-    print(f"väiksem kolm on {list1} ")
+    print(f"vĞ´iksem kolm on {list1} ")
 
 def average(i: list, p: list):
     """
@@ -201,7 +201,7 @@ def average(i: list, p: list):
 
 def Tulumaks(i: list, p: list):
     """
-    Arvutage töötasu, mida inimene saab pärast tulumaksu arvutamist.
+    Arvutage tÑ†Ñ†tasu, mida inimene saab pĞ´rast tulumaksu arvutamist.
     :param: List i: People's list
     :param: List p: Salaries list
     :rtype: float, str
@@ -240,7 +240,7 @@ def Tulumaks(i: list, p: list):
 
 def nimisorter (p: list, i: list):
     """
-    Arvutage töötasu, mida inimene saab pärast tulumaksu arvutamist.
+    Arvutage tÑ†Ñ†tasu, mida inimene saab pĞ´rast tulumaksu arvutamist.
     :param: List i: People's list
     :param: List p: Salaries list
     :rtype: float, str
@@ -279,7 +279,7 @@ def deleate_maloimushii (i: list,p: list):
     total = sum(p)
     keskmine = total / len(p)
     print(keskmine)
-    v=int(input("palk 1-surem, 2-vähem?"))
+    v=int(input("palk 1-surem, 2-vĞ´hem?"))
     if v == 1:
         for palk in p:
             if palk>keskmine:
@@ -311,25 +311,54 @@ def redakt (i: list,p: list):
     return i,p
 
 
-def every3 (i: list,p: list):
-    copyp = []
+def plussmoney (i: list,p: list):
     years = int(input("how many years"))
     while years > 0:
+        years -= 1
+        copyp=[]
         for jj in range(len(p)):
            float(p[jj])
            p[jj]+=(p[jj]*0.05)
            rez = p[jj]
            float(rez)
            copyp.append(rez)
-           years-=1
-           print(copyp)
-            
-    p=copyp
     return i,p
-        
 
 
+def every3(i: list, p: list):
+    for jj in range(len(i)):
+        if (jj + 1) % 3 == 0:
+            replace = input("print any name: ")
+            i[jj] = replace
+    return i, p
 
+
+def foundtulumakls (i: list,p: list):
+    print(i)
+    nimi = int(input("Valige selle isiku ametikoht, kelle palka soovite teada saada: "))
+    nimi2 = nimi - 1
+    palg = p[nimi2]
+    if palg <= 1200:
+        palg = palg - 654
+        if palg < 0:
+            print(f"{i[nimi2]} ei ole tulumaks")
+        else:
+            palg2 = palg * 0.8
+            tulumaks=palg-palg2
+            tulumaks=round(tulumaks,1)
+            print(f"{i[nimi2]} tulumaks on {tulumaks}")
+    elif palg > 1200 and palg < 2100:
+        eitulumaks = 500-0.55556*(palg-1200)
+        palg = palg-eitulumaks
+        palg2 = palg * 0.8
+        tulumaks=palg-palg2
+        tulumaks=round(tulumaks,1)
+        print(f"{i[nimi2]} tulumaks on {tulumaks}")
+    else:
+        palg2 = palg * 0.8
+        tulumaks=palg-palg2
+        tulumaks=round(tulumaks,1)
+        print(f"{i[nimi2]} tulumaks on {tulumaks}")
 
 
 
